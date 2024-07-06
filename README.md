@@ -1,6 +1,10 @@
 # Requirements
 - PHP  8.2
+- Composer
 # Run the project
+```
+composer install
+```
 ```
 php index.php
 ```
