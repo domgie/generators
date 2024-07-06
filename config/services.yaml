@@ -1,0 +1,21 @@
+services:
+  random_string_generator:
+    class: App\Generator\RandomStringGenerator
+    arguments:
+      $length: 10
+    tags: ['app.generators']
+
+  random_string_array_generator:
+    class: App\Generator\RandomStringArrayGenerator
+    arguments:
+      $size: 5
+      $generator: '@random_string_generator'
+    tags: ['app.generators']
+
+  letters_to_number_converter:
+    class: App\Converter\LettersToNumberConverter
+    tags: ['app.converters']
+
+  rot13_converter:
+    class: App\Converter\Rot13Converter
+    tags: ['app.converters']
